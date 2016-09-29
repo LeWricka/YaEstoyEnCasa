@@ -5,7 +5,6 @@ import {LoginPage} from './pages/login/login';
 import {ListPage} from './pages/list/list';
 import {HomePage} from './pages/main/home';
 import {LoginService} from "./providers/login/login-service";
-import {Events} from "ionic-angular/index";
 
 @Component({
     templateUrl: 'build/app.html',
@@ -18,8 +17,7 @@ class MyApp {
     pages:Array<{title: string, component: any}>;
 
     constructor(private platform:Platform,
-                private menu:MenuController,
-                private events:Events) {
+                private menu:MenuController) {
         this.initializeApp();
         // this.eventSubscription();
 
@@ -31,16 +29,16 @@ class MyApp {
         ];
     }
 
-    eventSubscription() {
-        console.log("EVENT SUBSCRITION");
-        this.events.subscribe('user:login', () => {
-            this.nav.setRoot(ListPage);
-        });
-
-        this.events.subscribe('user:logout', () => {
-            this.nav.setRoot(ListPage)
-        });
-    }
+    //eventSubscription() {
+    //    console.log("EVENT SUBSCRITION");
+    //    this.events.subscribe('user:login', () => {
+    //        this.nav.setRoot(ListPage);
+    //    });
+    //
+    //    this.events.subscribe('user:logout', () => {
+    //        this.nav.setRoot(ListPage)
+    //    });
+    //}
 
     initializeApp() {
         this.platform.ready().then(() => {
