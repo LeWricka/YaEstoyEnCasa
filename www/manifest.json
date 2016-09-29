@@ -1,0 +1,15 @@
+{
+  "name": "Ya estoy en casa",
+  "short_name": "En casa!",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "img/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "#FF9800",
+  "theme_color": "#FF9800"
+}
