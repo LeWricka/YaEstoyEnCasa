@@ -1,0 +1,10 @@
+.idea/*
+node_modules/
+server/node_modules/
+plugins/
+platforms/
+temp/
+*.DS_Store
+*.log
+*.swp
+.idea
